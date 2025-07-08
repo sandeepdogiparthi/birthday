@@ -244,7 +244,7 @@
         </div>
         
         <div class="instructions">
-            <h3>How to Import to Google Calendar:</h3>
+            <h3>How to Import to Google Calendar (with Annual Reminders):</h3>
             <ol>
                 <li>Add all your friends' birthdays using the form above</li>
                 <li>Click "Download CSV File" to save the file to your computer</li>
@@ -256,7 +256,15 @@
                 <li>Click "Select file from your computer" and choose your CSV file</li>
                 <li>Select your "Friends' Birthdays" calendar as the destination</li>
                 <li>Click "Import" - all birthdays will be added as annual recurring events!</li>
+                <li><strong>Set up reminders:</strong> After import, click on any birthday event</li>
+                <li>Click "Edit event" → Add notifications (e.g., "1 day before", "1 week before")</li>
+                <li>Choose "Save" → "All events" to apply reminders to all recurring birthdays</li>
+                <li><strong>Enable notifications:</strong> Go to Settings → General → ensure email/mobile notifications are enabled</li>
             </ol>
+            <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 16px; margin-top: 20px;">
+                <h4 style="color: #856404; margin-bottom: 8px;">🔔 Important for Yearly Reminders:</h4>
+                <p style="color: #856404; margin: 0;">After importing, you MUST set up notification reminders on the events. Google Calendar will then automatically remind you every year on each birthday!</p>
+            </div>
         </div>
         
         <div class="csv-preview" id="csvPreview" style="display: none;">
@@ -334,7 +342,7 @@
             birthdays.forEach(birthday => {
                 const date = birthday.date;
                 const subject = `${birthday.name}'s Birthday 🎂`;
-                const description = `Happy Birthday ${birthday.name}!`;
+                const description = `Happy Birthday ${birthday.name}! Don't forget to wish them well. 🎉`;
                 
                 rows.push([
                     `"${subject}"`,
